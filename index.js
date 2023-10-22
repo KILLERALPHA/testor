@@ -1,4 +1,5 @@
 const { inject } = require('@vercel/analytics');
+const crypto = require('crypto');
 
 inject();
 
