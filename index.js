@@ -1,4 +1,6 @@
-const crypto = require('crypto');
+const { inject } = require('@vercel/analytics');
+
+inject();
 
 function encryptText(text, secretKey) {
   const cipher = crypto.createCipher('aes-256-cbc', secretKey);
