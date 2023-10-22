@@ -25,4 +25,5 @@ module.exports = (req, res) => {
 
   // Send both encrypted and decrypted text in the response
   res.status(200).send(`Encrypted Text: ${encryptedText}\nDecrypted Text: ${decryptedText}`);
+  res.status(200).send(`Encrypted Text: ${encryptedText}\nDecrypted Text: ${decryptedText}`);
 };
