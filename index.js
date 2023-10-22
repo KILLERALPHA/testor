@@ -16,11 +16,10 @@ function decryptText(encryptedText, secretKey) {
 
 module.exports = (req, res) => {
   const queryData = req.query.data || '';
-  const secretKey = 'c325ff6d94e1b3a9b67b257301f9e5a7c325ff6d94e1b3a9b67b257301f9e5a7
-';
+  const secretKey = 'RZB-RAZOR-KING';
 
   const encryptedText = encryptText(queryData, secretKey);
   const decryptedText = decryptText(encryptedText, secretKey);
-  res.status(200).send(`Encrypted Text: ${encryptedText}<br><br>Decrypted Text: ${decryptedText}`);
+  res.status(200).send(`Encrypted Text: ${encryptedText}<br>Decrypted Text: ${decryptedText}`);
 
 };
