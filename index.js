@@ -19,4 +19,19 @@ app.get('/about', (req, res) => {
 
 // Export the Express API
 module.exports = app*/
-console.log("AHH BABY");
+//console.log("AHH BABY");
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  const currentDate = new Date();
+  res.send('Current Date and Time: ' + currentDate);
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log('Server is running on port ' + port);
+});
+
+module.exports = app;
