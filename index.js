@@ -1,4 +1,5 @@
 // index.js
+/*
 const express = require('express')
 
 const app = express()
@@ -17,4 +18,5 @@ app.get('/about', (req, res) => {
 })
 
 // Export the Express API
-module.exports = app
+module.exports = app*/
+console.log("AHH BABY");
