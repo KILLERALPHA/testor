@@ -19,7 +19,7 @@ module.exports = (req, res) => {
   const secretKey = 'c325ff6d94e1b3a9b67b257301f9e5a7c325ff6d94e1b3a9b67b257301f9e5a7';
 
   if (queryData === '') {
-    res.status(404).json({ message: 'site has been crashed' });
+    res.status(404).json({ message: 'crashed' });
     return;
   }
 
