@@ -24,6 +24,5 @@ module.exports = (req, res) => {
   const decryptedText = decryptText(encryptedText, secretKey);
 
   // Send both encrypted and decrypted text in the response
-  res.status(200).send(`Encrypted Text: ${encryptedText}\nDecrypted Text: ${decryptedText}`);
-  res.status(200).send(`Encrypted Text: ${encryptedText}\nDecrypted Text: ${decryptedText}`);
+  res.status(200).send(`Encrypted Text: ${encryptedText}\n\n\nDecrypted Text: ${decryptedText}`);
 };
