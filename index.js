@@ -16,10 +16,14 @@ function decryptText(encryptedText, secretKey) {
 
 module.exports = (req, res) => {
   const queryData = req.query.data || '';
-  const secretKey = 'RZB-RAZOR-KING';
+  const secretKey = 'c325ff6d94e1b3a9b67b257301f9e5a7c325ff6d94e1b3a9b67b257301f9e5a7';
+
+  if (queryData === '') {
+    res.status(404).json({ message: 'site has been crashed' });
+    return;
+  }
 
   const encryptedText = encryptText(queryData, secretKey);
   const decryptedText = decryptText(encryptedText, secretKey);
-  res.status(200).send(`Encrypted Text: ${encryptedText}<br>Decrypted Text: ${decryptedText}`);
-
+  res.status(200).send(`Encrypted Text: ${encryptedText}<br><br>Decrypted Text: ${decryptedText}`);
 };
