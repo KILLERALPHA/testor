@@ -16,7 +16,8 @@ function decryptText(encryptedText, secretKey) {
 
 module.exports = (req, res) => {
   const queryData = req.query.data || '';
-  const secretKey = 'thisismysecretkey';
+  const secretKey = 'c325ff6d94e1b3a9b67b257301f9e5a7c325ff6d94e1b3a9b67b257301f9e5a7
+';
 
   const encryptedText = encryptText(queryData, secretKey);
   const decryptedText = decryptText(encryptedText, secretKey);
