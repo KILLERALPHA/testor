@@ -29,5 +29,6 @@ module.exports = (req, res) => {
   const encryptedText = encryptText(queryData, secretKey);
   const decryptedText = decryptText(encryptedText, secretKey);
   const port = process.env.PORT;
-  res.status(200).send(`Encrypted Text: ${encryptedText}<br>Decrypted Text: ${decryptedText}<br>Port: ${port}`);
+  const clientIP = req.connection.remoteAddress;
+  res.status(200).send(`Encrypted Text: ${encryptedText}<br>Decrypted Text: ${decryptedText}<br>Port: ${port}<br>IP: ${clientIP}`);
 };
