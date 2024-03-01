@@ -1,20 +1,20 @@
-// index.js
-const express = require('express')
-
-const app = express()
-const PORT = 4000
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
-  console.log(`API listening on PORT ${PORT} `)
-})
+  console.log(`API listening on PORT ${PORT}`);
+});
 
-app.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳')
-})
+app.get('/Crackwar', (req, res) => {
+  // Handle specific functionality for '/Crackwar' route
+  res.send('Hello from Crackwar!');
+});
 
-app.get('/about', (req, res) => {
-  res.send('This is my about route..... ')
-})
+// For all other routes
+app.use((req, res) => {
+  res.status(404).json({ status: 'banned', reason: 'The page was not found' });
+});
 
-// Export the Express API
-module.exports = app
+// Export the Express app
+module.exports = app;
